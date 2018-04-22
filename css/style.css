@@ -1,0 +1,58 @@
+body {
+    background: #020202;
+    cursor: crosshair;
+    overflow: hidden;
+  }
+  canvas{display:block}
+  div {
+    position: absolute;
+    left: 50%;
+  }
+  .ani{
+    top: 10em;
+    width: 13em;
+  }
+
+  .happy{
+    top: 4em;
+    width: 22em;
+  }
+
+  @-webkit-keyframes pulse {
+    from {
+      -webkit-transform: scale(1, 1) translateX(-50%);
+      transform: scale(1, 1) translateX(-50%);
+    }
+  
+    50% {
+      -webkit-transform: scale(1.05, 1.05) translateX(-50%);
+      transform: scale(1.05, 1.05) translateX(-50%);
+    }
+  
+    to {
+      -webkit-transform: scale(1, 1) translateX(-50%);
+      transform: scale(1, 1) translateX(-50%);
+    }
+  }
+  
+  @keyframes pulse {
+    from {
+      -webkit-transform:  translateX(-50%) scale(1, 1);
+      transform:  translateX(-50%) scale(1, 1);
+    }
+  
+    50% {
+      -webkit-transform: translateX(-50%) scale(1.05, 1.05);
+      transform: translateX(-50%) scale(1.05, 1.05);
+    }
+  
+    to {
+      -webkit-transform: translateX(-50%) scale(1, 1);
+      transform: translateX(-50%) scale(1, 1);
+    }
+  }
+  
+  .pulse {
+    -webkit-animation: pulse 2s linear infinite;
+    animation: pulse 2s linear infinite;
+  }
